@@ -1,0 +1,113 @@
+.servicesPage {
+  min-height: 100vh;
+  background: #0d0d12;
+  color: #fff;
+  padding-bottom: 100px;
+}
+
+.hero {
+  padding: 180px 0 80px;
+  background: radial-gradient(circle at 10% 20%, rgba(108, 99, 255, 0.15), transparent 40%),
+              radial-gradient(circle at 90% 80%, rgba(0, 212, 255, 0.1), transparent 40%);
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.heroContent h1 {
+  font-size: 56px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #fff 0%, rgba(255,255,255,0.6) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heroContent p {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.5);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 32px;
+  margin-top: 60px;
+}
+
+.serviceCard {
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 32px;
+  padding: 48px 32px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.serviceCard::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(circle at top right, rgba(108, 99, 255, 0.1), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.serviceCard:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(108, 99, 255, 0.3);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.serviceCard:hover::before {
+  opacity: 1;
+}
+
+.serviceIcon {
+  font-size: 48px;
+  margin-bottom: 24px;
+  filter: drop-shadow(0 0 10px rgba(108, 99, 255, 0.3));
+}
+
+.serviceTitle {
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.serviceDesc {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.6;
+  flex-grow: 1;
+  margin-bottom: 24px;
+}
+
+.serviceArrow {
+  font-size: 20px;
+  color: #6C63FF;
+  transition: transform 0.3s ease;
+}
+
+.serviceCard:hover .serviceArrow {
+  transform: translateX(10px);
+}
+
+@media (max-width: 768px) {
+  .heroContent h1 { font-size: 36px; }
+  .servicesGrid { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,191 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 24px 0;
+  transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
+}
+
+.navbar.scrolled {
+  background: rgba(5, 5, 15, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  padding: 16px 0;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.4);
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.logo {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  text-decoration: none;
+  z-index: 1001; /* Above mobile menu */
+}
+
+.logoX {
+  background: linear-gradient(135deg, #6C63FF, #00D4FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 28px;
+}
+
+.logoDigital {
+  color: rgba(255,255,255,0.5);
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: 6px;
+  letter-spacing: 0.12em;
+}
+
+.logoImg {
+  height: 48px;
+  width: auto;
+  filter: brightness(0) invert(1); /* Ensures the logo stays white on the dark background regardless of its source color */
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .logoImg {
+    height: 36px;
+  }
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  list-style: none;
+  flex: 1;
+  justify-content: center;
+}
+
+.link {
+  display: inline-block;
+  padding: 8px 16px;
+  font-size: 15px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.65);
+  border-radius: 8px;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+.link:hover, .activeLink {
+  color: white;
+  background: rgba(255,255,255,0.08);
+}
+
+.rightGroup {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  z-index: 1001; /* Above mobile menu */
+}
+
+.langToggle {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px;
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 14px;
+  cursor: pointer;
+  transition: all 0.25s;
+  white-space: nowrap;
+}
+
+.langToggle:hover {
+  background: rgba(108, 99, 255, 0.2);
+  border-color: rgba(108, 99, 255, 0.4);
+}
+
+.desktopCtaWrapper {
+  display: block;
+}
+
+.mobileCtaLi {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.hamburger span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background: white;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+.hamburger.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+@media (max-width: 990px) {
+  .hamburger { display: flex; }
+  .desktopCtaWrapper { display: none; }
+  .mobileCtaLi { display: block; width: 100%; margin-top: 10px; }
+  
+  .links {
+    position: fixed;
+    top: 0; bottom: 0; left: 0; right: 0;
+    background: rgba(5,5,15,0.98);
+    backdrop-filter: blur(20px);
+    flex-direction: column;
+    gap: 8px;
+    padding: 100px 32px 32px;
+    justify-content: flex-start;
+    align-items: stretch;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .links.open {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .links li { width: 100%; opacity: 0; transform: translateY(-20px); transition: all 0.4s ease; }
+  .links.open li { opacity: 1; transform: translateY(0); }
+  
+  .links.open li:nth-child(1) { transition-delay: 0.1s; }
+  .links.open li:nth-child(2) { transition-delay: 0.15s; }
+  .links.open li:nth-child(3) { transition-delay: 0.2s; }
+  .links.open li:nth-child(4) { transition-delay: 0.25s; }
+  .links.open li:nth-child(5) { transition-delay: 0.3s; }
+  .links.open li:nth-child(6) { transition-delay: 0.35s; }
+
+  .link { display: block; width: 100%; padding: 16px 20px; font-size: 18px; text-align: center; }
+}

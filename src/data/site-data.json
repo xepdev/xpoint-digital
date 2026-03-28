@@ -1,0 +1,491 @@
+{
+  "genel": {
+    "telefon": "+90 555 031 00 01",
+    "eposta": "info@xpointdigital.com",
+    "adres": "Alkü Hastane Cd. 17, 07400 Antalya, Alanya Türkiye",
+    "calismaSaatleriTR": "Pazartesi - Cuma: 09:00 - 18:00",
+    "calismaSaatleriEN": "Monday - Friday: 09:00 - 18:00",
+    "favIcon": "/favicon.ico",
+    "logoUrl": "/logo.png",
+    "mapUrl": "https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d3205.5976553949577!2d32.0451!3d36.5397!3m2!1i1024!2i768!4f13.1!2m1!1sAlk%C3%BC%20Hastane%20Cd.%2017%2C%2007400%20Antalya%2C%20Alanya%20T%C3%BCrkiye!5e0!3m2!1str!2str!4v1774705226255!5m2!1str!2str\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade",
+    "analyticsId": "",
+    "sosyalMedya": {
+      "instagram": "https://instagram.com/xpointdigital",
+      "facebook": "https://facebook.com/xpointdigital",
+      "youtube": "",
+      "linkedin": "https://linkedin.com/company/xpointdigital"
+    }
+  },
+  "seo": {
+    "global": {
+      "siteTitle": "XPOINT DIGITAL — Dijital Ajans",
+      "siteDesc": "Markanızı dijitalde büyütüyoruz. SEO, sosyal medya yönetimi, içerik üretimi ve marka stratejisi hizmetleri.",
+      "keywords": "dijital ajans, seo, sosyal medya yönetimi, içerik üretimi, istanbul dijital ajans",
+      "ogImage": "/og-image.jpg"
+    },
+    "sayfalar": {
+      "anasayfa": {
+        "title": "XPOINT DIGITAL — Dijital Ajans",
+        "desc": "Markanızı dijitalde büyütüyoruz. SEO, sosyal medya ve içerik üretimi hizmetleri."
+      },
+      "hakkimizda": {
+        "title": "Hakkımızda | XPOINT DIGITAL",
+        "desc": "Genç ve dinamik ekibimizle markanızın dijital yolculuğuna rehberlik ediyoruz."
+      },
+      "hizmetler": {
+        "title": "Hizmetlerimiz | XPOINT DIGITAL",
+        "desc": "SEO, sosyal medya, içerik üretimi ve daha fazlası."
+      },
+      "paketler": {
+        "title": "Paketler & Fiyatlar | XPOINT DIGITAL",
+        "desc": "Her bütçeye uygun dijital pazarlama paketleri."
+      },
+      "referanslar": {
+        "title": "Referanslarımız | XPOINT DIGITAL",
+        "desc": "150+ markaya dijital büyüme sağladık."
+      },
+      "iletisim": {
+        "title": "İletişim | XPOINT DIGITAL",
+        "desc": "Bizimle iletişime geçin, projenizi konuşalım."
+      }
+    }
+  },
+  "hizmetler": [
+    {
+      "icon": "🔍",
+      "slug": "seo",
+      "titleTR": "SEO & İçerik Pazarlaması",
+      "titleEN": "SEO & Content Marketing",
+      "descTR": "Google'da üst sıralara çıkın. Organik trafik ile müşteri kitlenizi büyütün.",
+      "descEN": "Rank higher on Google. Grow your customer base with organic traffic.",
+      "longDescTR": "SEO (Arama Motoru Optimizasyonu) sadece anahtar kelimelerden ibaret değildir. Biz, markanızın Google aramalarında en üst sıralarda kalıcı olmasını sağlamak için teknik SEO, içerik stratejisi ve otorite inşasını birleştiriyoruz.\n\nNeler Yapıyoruz?\n- Teknik SEO Analizi ve Uygulama\n- Anahtar Kelime Stratejileri\n- İçerik Planlama ve Üretimi\n- Rakip Analizi ve Backlink Çalışmaları",
+      "longDescEN": "SEO is not just about keywords. We combine technical SEO, content strategy, and authority building to ensure your brand remains at the top of Google searches permanently.\n\nWhat We Do:\n- Technical SEO Analysis and Implementation\n- Keyword Strategies\n- Content Planning and Production\n- Competitor Analysis and Backlink Studies"
+    },
+    {
+      "icon": "📱",
+      "slug": "sosyal-medya",
+      "titleTR": "Sosyal Medya Yönetimi",
+      "titleEN": "Social Media Management",
+      "descTR": "Markanıza uygun içerikler ve stratejik yayın planları ile sosyal medyada fark yaratın.",
+      "descEN": "Stand out on social media with brand-specific content and strategic publishing plans.",
+      "longDescTR": "Sosyal medya, markanızın yaşayan yüzüdür. Instagram, LinkedIn, TikTok ve Facebook platformlarında etkileşimi yüksek içerikler üreterek topluluğunuzu büyütüyoruz.\n\nHizmet Kapsamı:\n- Görsel ve Video Tasarımı\n- Aylık Yayın Planlama\n- Etkileşim Yönetimi\n- Influencer İş Birlikleri",
+      "longDescEN": "Social media is the living face of your brand. We grow your community by producing high-engagement content on Instagram, LinkedIn, TikTok, and Facebook platforms.\n\nService Scope:\n- Visual and Video Design\n- Monthly Publishing Planning\n- Engagement Management\n- Influencer Collaborations"
+    },
+    {
+      "icon": "🎥",
+      "slug": "produksiyon",
+      "titleTR": "Video & Fotoğraf Prodüksiyon",
+      "titleEN": "Video & Photography",
+      "descTR": "Profesyonel çekimler ve video prodüksiyonla markanızı öne çıkarın.",
+      "descEN": "Stand out with professional photography and video production.",
+      "longDescTR": "Görsel hikayecilik markanızın değerini artırır. Profesyonel ekipmanlarımızla markanızın hikayesini en etkileyici şekilde anlatıyoruz.\n\nNeler Sağlıyoruz?\n- Kurumsal Tanıtım Filmleri\n- Ürün Fotoğraf Çekimleri\n- Reels ve Kısa Video Prodüksiyonu\n- Profesyonel Kurgu ve Montaj",
+      "longDescEN": "Visual storytelling increases the value of your brand. We tell your brand's story in the most impressive way with our professional equipment.\n\nWhat We Provide:\n- Corporate Promotional Films\n- Product Photoshoots\n- Reels and Short Video Production\n- Professional Editing"
+    },
+    {
+      "icon": "📈",
+      "slug": "reklam",
+      "titleTR": "Dijital Reklamcılık",
+      "titleEN": "Digital Advertising",
+      "descTR": "Hedef kitlenize ulaşan, ölçülebilir reklam kampanyaları yönetiyoruz.",
+      "descEN": "We manage measurable ad campaigns that reach your target audience.",
+      "longDescTR": "Meta (Instagram/Facebook) ve Google Ads ekosisteminde her kuruşun karşılığını almanızı sağlıyoruz. Dönüşüm odaklı stratejilerimizle satışlarınızı artırıyoruz.\n\nStratejimiz:\n- Hedef Kitle Analizi ve Segmentasyon\n- Kreatif Reklam Tasarımları\n- Dönüşüm Odaklı Kampanya Yönetimi\n- Detaylı ROI Raporlaması",
+      "longDescEN": "We ensure you get value for every penny in the Meta (Instagram/Facebook) and Google Ads ecosystem. We increase your sales with our conversion-oriented strategies.\n\nOur Strategy:\n- Audience Analysis and Segmentation\n- Creative Ad Designs\n- Conversion-Focused Campaign Management\n- Detailed ROI Reporting"
+    },
+    {
+      "icon": "🌐",
+      "slug": "web-tasarim",
+      "titleTR": "Web Tasarım & Geliştirme",
+      "titleEN": "Web Design & Development",
+      "descTR": "Modern, hızlı ve SEO uyumlu web siteleri tasarlıyor ve geliştiriyoruz.",
+      "descEN": "We design and develop modern, fast and SEO-compliant websites.",
+      "longDescTR": "Web siteniz dijital mağazanızdır. Kullanıcı deneyimi (UX) odaklı, mobil uyumlu ve Google hız kriterlerine (Core Web Vitals) tam puan alan siteler geliştiriyoruz.\n\nTeknolojilerimiz:\n- Next.js ve React Frameworkleri\n- Modern Animasyonlar (Framer Motion)\n- Mobil Uyumlu Tasarımlar\n- Hızlı Yükleme Performansı",
+      "longDescEN": "Your website is your digital store. We develop sites that are user experience (UX) oriented, mobile compatible, and get full marks for Google speed criteria (Core Web Vitals).\n\nOur Technologies:\n- Next.js and React Frameworks\n- Modern Animations (Framer Motion)\n- Mobile Responsive Designs\n- High Performance Loading"
+    },
+    {
+      "icon": "💡",
+      "slug": "marka-stratejisi",
+      "titleTR": "Marka Stratejisi & Kimlik",
+      "titleEN": "Brand Strategy & Identity",
+      "descTR": "Markanızın sesini, kimliğini ve hikayesini birlikte inşa ediyoruz.",
+      "descEN": "We build your brand's voice, identity and story together.",
+      "longDescTR": "Sadece bir logo değil, bir duruş tasarlıyoruz. Markanızın rakiplerinden nasıl ayrışacağını, hangi tonla konuşacağını belirliyoruz.\n\nKapsam:\n- Logo ve Kurumsal Kimlik Tasarımı\n- Marka Tonu ve Sesi Belirleme\n- Marka Hikayesi ve Konumlandırma\n- Görsel Dil Kılavuzu",
+      "longDescEN": "We don't just design a logo; we design a stance. We determine how your brand will differentiate itself from its competitors and what tone it will speak with.\n\nScope:\n- Logo and Corporate Identity Design\n- Brand Tone and Voice Determination\n- Brand Story and Positioning\n- Visual Style Guide"
+    }
+  ],
+  "paketler": [
+    {
+      "nameTR": "STARTER",
+      "nameEN": "STARTER",
+      "priceTR": "4.999₺",
+      "priceEN": "$199",
+      "popular": false,
+      "color": "#6C63FF",
+      "featuresTR": [
+        "Sosyal Medya Yönetimi (3 platform)",
+        "Aylık 12 İçerik",
+        "Temel SEO Analizi",
+        "Aylık Rapor"
+      ],
+      "featuresEN": [
+        "Social Media Management (3 platforms)",
+        "12 Posts/Month",
+        "Basic SEO Analysis",
+        "Monthly Report"
+      ],
+      "notIncludedTR": [
+        "Video Prodüksiyon",
+        "Google Ads Yönetimi"
+      ],
+      "notIncludedEN": [
+        "Video Production",
+        "Google Ads Management"
+      ]
+    },
+    {
+      "nameTR": "GROWTH",
+      "nameEN": "GROWTH",
+      "priceTR": "9.999₺",
+      "priceEN": "$399",
+      "popular": true,
+      "color": "#00D4FF",
+      "featuresTR": [
+        "Sosyal Medya Yönetimi (5 platform)",
+        "Aylık 20 İçerik",
+        "Kapsamlı SEO",
+        "Google & Meta Ads",
+        "Haftalık Rapor"
+      ],
+      "featuresEN": [
+        "Social Media Management (5 platforms)",
+        "20 Posts/Month",
+        "Full SEO",
+        "Google & Meta Ads",
+        "Weekly Report"
+      ],
+      "notIncludedTR": [],
+      "notIncludedEN": []
+    },
+    {
+      "nameTR": "ENTERPRISE",
+      "nameEN": "ENTERPRISE",
+      "priceTR": "19.999₺",
+      "priceEN": "$799",
+      "popular": false,
+      "color": "#9B59B6",
+      "featuresTR": [
+        "Tüm Platformlar",
+        "Sınırsız İçerik",
+        "Tam SEO + Teknik",
+        "Video Prodüksiyon",
+        "Öncelikli Destek",
+        "Anlık Raporlama"
+      ],
+      "featuresEN": [
+        "All Platforms",
+        "Unlimited Content",
+        "Full SEO + Technical",
+        "Video Production",
+        "Priority Support",
+        "Real-time Reporting"
+      ],
+      "notIncludedTR": [],
+      "notIncludedEN": []
+    }
+  ],
+  "ekip": [
+    {
+      "name": "Serkan Yıldız",
+      "roleTR": "Kurucu & Stratejist",
+      "roleEN": "Founder & Strategist",
+      "bioTR": "Dijital pazarlama alanında 10+ yıl deneyim.",
+      "bioEN": "10+ years of experience in digital marketing.",
+      "icon": "👨‍💼"
+    },
+    {
+      "name": "Ayşe Kara",
+      "roleTR": "İçerik & SEO Uzmanı",
+      "roleEN": "Content & SEO Specialist",
+      "bioTR": "100+ markanın içerik stratejisini yönetmiştir.",
+      "bioEN": "Has managed content strategies for 100+ brands.",
+      "icon": "👩‍💻"
+    },
+    {
+      "name": "Mert Demir",
+      "roleTR": "Sosyal Medya Yöneticisi",
+      "roleEN": "Social Media Manager",
+      "bioTR": "Viral içerikler ve stratejik yayın planlarında uzman.",
+      "bioEN": "Expert in viral content and strategic posting plans.",
+      "icon": "📱"
+    },
+    {
+      "name": "İsim",
+      "roleTR": "Rol",
+      "roleEN": "Role",
+      "bioTR": "",
+      "bioEN": "",
+      "icon": "👨‍💼"
+    }
+  ],
+  "referanslar": [
+    {
+      "name": "TechStart İstanbul",
+      "industryTR": "Teknoloji & SaaS",
+      "industryEN": "Technology & SaaS",
+      "resultTR": "%240 Organik Büyüme",
+      "resultEN": "240% Organic Growth",
+      "icon": "🚀"
+    },
+    {
+      "name": "Bella Coffee Co.",
+      "industryTR": "F&B / Gastronomi",
+      "industryEN": "F&B / Gastronomy",
+      "resultTR": "3x Sosyal Medya Takipçisi",
+      "resultEN": "3x Social Media Followers",
+      "icon": "☕"
+    },
+    {
+      "name": "ArkaModa",
+      "industryTR": "Moda & E-ticaret",
+      "industryEN": "Fashion & E-commerce",
+      "resultTR": "%180 Reklam ROI",
+      "resultEN": "180% Ad ROI",
+      "icon": "👗"
+    },
+    {
+      "name": "ProFit Gym",
+      "industryTR": "Spor & Sağlık",
+      "industryEN": "Sports & Health",
+      "resultTR": "500+ Yeni Üye/Ay",
+      "resultEN": "500+ New Members/Month",
+      "icon": "💪"
+    },
+    {
+      "name": "NovaMimarlik",
+      "industryTR": "Mimarlık & İnşaat",
+      "industryEN": "Architecture & Construction",
+      "resultTR": "%320 Web Trafiği",
+      "resultEN": "320% Web Traffic",
+      "icon": "🏗️"
+    },
+    {
+      "name": "SunHotel Bodrum",
+      "industryTR": "Turizm & Otelcilik",
+      "industryEN": "Tourism & Hospitality",
+      "resultTR": "%95 Doluluk Oranı",
+      "resultEN": "95% Occupancy Rate",
+      "icon": "🏨"
+    },
+    {
+      "name": "Marka",
+      "industryTR": "",
+      "industryEN": "",
+      "resultTR": "",
+      "resultEN": "",
+      "icon": "🚀"
+    }
+  ],
+  "yorumlar": [
+    {
+      "name": "Ali Öztürk",
+      "roleTR": "TechStart CEO",
+      "roleEN": "TechStart CEO",
+      "textTR": "XPOINT DIGITAL, dijital varlığımızı tamamen dönüştürdü. 6 ayda organik trafiğimiz %240 arttı.",
+      "textEN": "XPOINT DIGITAL completely transformed our digital presence. Organic traffic grew 240% in 6 months."
+    },
+    {
+      "name": "Zeynep Arslan",
+      "roleTR": "Bella Coffee Kurucu",
+      "roleEN": "Bella Coffee Founder",
+      "textTR": "Sosyal medya yönetimlerindeki yaratıcılık ve hız inanılmaz. Takipçilerimiz 3 katına çıktı!",
+      "textEN": "Their creativity and speed in social media management is incredible. Our followers tripled!"
+    },
+    {
+      "name": "Kemal Yılmaz",
+      "roleTR": "ArkaModa Genel Müdür",
+      "roleEN": "ArkaModa General Manager",
+      "textTR": "Reklam bütçemizin geri dönüşü %180 oldu. Bu rakamları beklemiyorduk, çok memnunuz.",
+      "textEN": "Our advertising ROI reached 180%. We didn't expect these numbers, we are very satisfied."
+    }
+  ],
+  "mesajlar": [
+    {
+      "id": "97e2076a-463e-4f0c-a914-2870db84542e",
+      "firstName": "asdasdas",
+      "lastName": "dasdas",
+      "email": "dsadsa@asdsadas",
+      "phone": "dsadsadas",
+      "topic": "Sosyal Medya Yönetimi",
+      "message": "sadsadsa",
+      "createdAt": "2026-03-28T13:56:05.284Z",
+      "isRead": false
+    }
+  ],
+  "iletisimKonulariTR": [
+    "SEO & İçerik",
+    "Sosyal Medya Yönetimi",
+    "Dijital Reklamcılık",
+    "Web Tasarım",
+    "Paket & Fiyat Teklifi",
+    "Diğer"
+  ],
+  "iletisimKonulariEN": [
+    "SEO & Content",
+    "Social Media Management",
+    "Digital Advertising",
+    "Web Design",
+    "Package & Quote",
+    "Other"
+  ],
+  "stats": [
+    {
+      "icon": "🏆",
+      "value": "150+",
+      "labelTR": "Mutlu Marka",
+      "labelEN": "Happy Brands"
+    },
+    {
+      "icon": "🚀",
+      "value": "500+",
+      "labelTR": "Tamamlanan Proje",
+      "labelEN": "Projects Completed"
+    },
+    {
+      "icon": "👥",
+      "value": "8",
+      "labelTR": "Uzman Ekip",
+      "labelEN": "Expert Staff"
+    },
+    {
+      "icon": "📈",
+      "value": "%300",
+      "labelTR": "Ortalama Büyüme",
+      "labelEN": "Avg. Growth"
+    }
+  ],
+  "layout": {
+    "navbar": [
+      {
+        "href": "/",
+        "labelTR": "Ana Sayfa",
+        "labelEN": "Home"
+      },
+      {
+        "href": "/hizmetler",
+        "labelTR": "Hizmetler",
+        "labelEN": "Packages"
+      },
+      {
+        "href": "/referanslar",
+        "labelTR": "Referanslar",
+        "labelEN": "References"
+      },
+      {
+        "href": "/hakkimizda",
+        "labelTR": "Hakkımızda",
+        "labelEN": "About Us"
+      },
+      {
+        "href": "/iletisim",
+        "labelTR": "İletişim",
+        "labelEN": "Contact"
+      },
+      {
+        "href": "/paketler",
+        "labelTR": "Paketler",
+        "labelEN": "New Link"
+      }
+    ],
+    "footer": {
+      "aboutTR": "XPOINT DIGITAL, markanızı dijital dünyada bir üst seviyeye taşımak için yaratıcı çözümler sunan yeni nesil bir dijital ajanstır.",
+      "aboutEN": "XPOINT DIGITAL is a next-generation digital agency offering creative solutions to take your brand to the next level in the digital world.",
+      "columns": [
+        {
+          "titleTR": "Hızlı Bağlantılar",
+          "titleEN": "Quick Links",
+          "links": [
+            {
+              "href": "/paketler",
+              "labelTR": "Paketlerimiz",
+              "labelEN": "Our Packages"
+            },
+            {
+              "href": "/referanslar",
+              "labelTR": "Referanslar",
+              "labelEN": "References"
+            },
+            {
+              "href": "/hakkimizda",
+              "labelTR": "Kurumsal",
+              "labelEN": "Corporate"
+            }
+          ]
+        },
+        {
+          "titleTR": "Hizmetlerimiz",
+          "titleEN": "Services",
+          "links": [
+            {
+              "href": "/hizmetler/seo",
+              "labelTR": "SEO Hizmetleri",
+              "labelEN": "SEO Services"
+            },
+            {
+              "href": "/hizmetler/sosyal-medya",
+              "labelTR": "Sosyal Medya",
+              "labelEN": "Social Media"
+            },
+            {
+              "href": "/hizmetler/web-tasarim",
+              "labelTR": "Web Tasarım",
+              "labelEN": "Web Design"
+            }
+          ]
+        }
+      ],
+      "copyrightTR": "© 2024 XPOINT DIGITAL. Tüm Hakları Saklıdır.",
+      "copyrightEN": "© 2024 XPOINT DIGITAL. All Rights Reserved."
+    }
+  },
+  "hakkimizda": {
+    "titleTR": "Dijitalde ",
+    "titleEN": "Your Partner in ",
+    "subtitleTR": "İmzası Olan Ekip",
+    "subtitleEN": "Digital Growth",
+    "descriptionTR": "Genç, dinamik ve her biri kendi alanında uzman ekibimizle markanızın dijital yolculuğuna rehberlik ediyoruz. Amacımız sadece bir ajans olmak değil, markanızın büyüme ortağı olmaktır.",
+    "descriptionEN": "Guided by our young, dynamic team of experts, we lead your brand's digital journey. Our goal is not just to be an agency, but your brand's growth partner.",
+    "valuesTitleTR": "Vizyonumuz & Değerlerimiz",
+    "valuesTitleEN": "Our Vision & Values",
+    "valuesSubtitleTR": "Bizi farklı kılan temel prensiplerimiz.",
+    "valuesSubtitleEN": "The core principles that set us apart.",
+    "values": [
+      {
+        "icon": "🚀",
+        "titleTR": "İnovasyon",
+        "titleEN": "Innovation",
+        "descTR": "Sürekli gelişen dijital trendleri takip ediyor ve markanıza uyarlıyoruz.",
+        "descEN": "We follow ever-evolving digital trends and adapt them to your brand."
+      },
+      {
+        "icon": "📈",
+        "titleTR": "Veri Odaklılık",
+        "titleEN": "Data-Driven",
+        "descTR": "Kararlarımızı tahminlere değil, kesin ve ölçülebilir verilere dayandırıyoruz.",
+        "descEN": "We base our decisions on precise, measurable data, not guesses."
+      },
+      {
+        "icon": "💎",
+        "titleTR": "Premium Kalite",
+        "titleEN": "Premium Quality",
+        "descTR": "Ürettiğimiz her içerik markanızın kalitesini yansıtacak şekilde özenle hazırlanır.",
+        "descEN": "Every content we produce is carefully crafted to reflect your brand quality."
+      },
+      {
+        "icon": "🤝",
+        "titleTR": "Şeffaflık",
+        "titleEN": "Transparency",
+        "descTR": "Aylık raporlamalar ve anlık iletişim ile süreçlerin her adımında yanınızdayız.",
+        "descEN": "We stand with you at every step with monthly reports and instant communication."
+      }
+    ]
+  }
+}

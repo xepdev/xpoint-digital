@@ -1,0 +1,122 @@
+.footer {
+  position: relative;
+  background: #070714;
+  border-top: 1px solid rgba(255,255,255,0.07);
+  overflow: hidden;
+  padding-top: 80px;
+}
+
+.glow {
+  position: absolute;
+  top: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 800px; height: 300px;
+  background: radial-gradient(ellipse at center top, rgba(108,99,255,0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.top {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 48px;
+  padding-bottom: 60px;
+}
+
+.logo {
+  display: block;
+  margin-bottom: 24px;
+  width: fit-content;
+}
+
+.logoImg {
+  height: 28px; /* Navbar'dan biraz daha küçük */
+  width: auto;
+  display: block;
+  filter: brightness(0) invert(1); /* Beyaz yapar */
+  opacity: 0.9;
+  transition: opacity 0.3s;
+}
+
+.logoImg:hover {
+  opacity: 1;
+}
+
+.tagline {
+  color: rgba(255,255,255,0.5);
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 24px;
+  max-width: 280px;
+}
+
+.socials {
+  display: flex;
+  gap: 10px;
+}
+
+.socialIcon {
+  width: 38px; height: 38px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,0.6);
+  transition: all 0.25s;
+}
+
+.socialIcon svg { width: 16px; height: 16px; }
+
+.socialIcon:hover {
+  background: rgba(108,99,255,0.2);
+  border-color: rgba(108,99,255,0.5);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.linksGroup h4 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+  margin-bottom: 20px;
+}
+
+.linksGroup ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.linksGroup ul li,
+.linksGroup ul li a {
+  font-size: 14px;
+  color: rgba(255,255,255,0.6);
+  transition: color 0.2s;
+  cursor: pointer;
+}
+
+.linksGroup ul li a:hover { color: white; }
+
+.bottom {
+  border-top: 1px solid rgba(255,255,255,0.07);
+  padding: 24px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+  color: rgba(255,255,255,0.3);
+}
+
+@media (max-width: 900px) {
+  .top { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 600px) {
+  .top { grid-template-columns: 1fr; }
+  .bottom { flex-direction: column; gap: 8px; text-align: center; }
+}
