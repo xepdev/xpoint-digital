@@ -1,7 +1,5 @@
 import { getSiteData } from '@/lib/db';
 import { notFound } from 'next/navigation';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
 import styles from './ServiceDetail.module.css';
 
 interface ServicePageProps {

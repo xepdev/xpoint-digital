@@ -1,11 +1,14 @@
 'use client';
-import { useLang, t } from '@/components/LanguageProvider';
-import styles from '@/app/hakkimizda/page.module.css';
+
+import React from 'react';
+import { useLang, t } from '@/lib/i18n';
+import styles from './HakkimizdaContent.module.css';
+import { TeamMember, AboutPageData, Stat } from '@/lib/db';
 
 interface HakkimizdaContentProps {
-  ekip: any[];
-  hakkimizda: any;
-  stats: any[];
+  ekip: TeamMember[];
+  hakkimizda: AboutPageData;
+  stats: Stat[];
 }
 
 export default function HakkimizdaContent({ ekip, hakkimizda, stats }: HakkimizdaContentProps) {
@@ -49,7 +52,7 @@ export default function HakkimizdaContent({ ekip, hakkimizda, stats }: Hakkimizd
              <p className="section-subtitle">{lang === 'tr' ? hakkimizda.valuesSubtitleTR : hakkimizda.valuesSubtitleEN}</p>
           </div>
           <div className={styles.valuesGrid}>
-            {(hakkimizda.values || []).map((v:any, i:number) => (
+            {(hakkimizda.values || []).map((v, i) => (
                <div key={i} className={styles.valueCard}>
                 <div className={styles.valueIcon}>{v.icon}</div>
                 <h3 className={styles.valueTitle}>{lang === 'tr' ? v.titleTR : v.titleEN}</h3>
