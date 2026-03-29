@@ -2,7 +2,9 @@
 
 import React, { useEffect, useRef } from 'react';
 
-export default function HeroCanvas() {
+import { Service } from '@/lib/db';
+
+export default function HeroCanvas({ hizmetler }: { hizmetler?: Service[] }) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {

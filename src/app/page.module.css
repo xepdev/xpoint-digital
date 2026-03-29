@@ -318,3 +318,123 @@
 @media (max-width: 480px) {
   .statsGrid { grid-template-columns: repeat(2, 1fr); }
 }
+
+/* NEW SECTIONS STYLES */
+.home { overflow: hidden; }
+
+.pricingSection { background: rgba(255,255,255,0.01); }
+.pricingGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+.priceCard {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+  position: relative;
+  transition: all 0.4s ease;
+}
+.priceCard:hover {
+  transform: translateY(-10px);
+  border-color: rgba(108, 99, 255, 0.4);
+  background: rgba(108, 99, 255, 0.04);
+}
+.popular {
+  border-color: rgba(108, 99, 255, 0.6);
+  background: rgba(108, 99, 255, 0.05);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+.popularBadge {
+  position: absolute;
+  top: 20px; right: 20px;
+  background: linear-gradient(90deg, #6C63FF, #00D4FF);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.priceAmount {
+  font-size: 32px;
+  font-weight: 800;
+  color: white;
+  margin: 20px 0;
+}
+.priceFeatures {
+  list-style: none;
+  padding: 0;
+  margin: 32px 0;
+  text-align: left;
+}
+.priceFeatures li {
+  margin-bottom: 12px;
+  color: rgba(255,255,255,0.6);
+  font-size: 14px;
+}
+
+/* TEAM */
+.teamSection { background: var(--bg-primary); }
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+.teamCard {
+  text-align: center;
+  padding: 32px;
+  background: rgba(255,255,255,0.02);
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.05);
+  transition: all 0.3s ease;
+}
+.teamCard:hover {
+  background: rgba(108, 99, 255, 0.05);
+  transform: translateY(-5px);
+}
+.teamIcon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  display: block;
+}
+
+/* TESTIMONIALS */
+.testimonialsSection { background: rgba(255,255,255,0.01); }
+.testimonialsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+.testimonialCard {
+  background: rgba(255,255,255,0.03);
+  padding: 32px;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.05);
+  font-style: italic;
+  position: relative;
+}
+.testimonialAuthor {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  font-style: normal;
+}
+.testimonialAuthor strong {
+  color: white;
+  font-size: 16px;
+}
+.testimonialAuthor span {
+  color: rgba(255,255,255,0.5);
+  font-size: 13px;
+}
+
+@media (max-width: 900px) {
+  .pricingGrid, .testimonialsGrid { grid-template-columns: 1fr; }
+  .teamGrid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .teamGrid { grid-template-columns: 1fr; }
+}
