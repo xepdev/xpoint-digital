@@ -1,8 +1,8 @@
 'use client';
 
 import React from 'react';
-import { useLang, t } from '@/lib/i18n';
-import styles from './HomeContent.module.css';
+import { useLang, t } from '@/components/LanguageProvider';
+import styles from '@/app/page.module.css';
 import { Stat, Service } from '@/lib/db';
 import HeroCanvas from './HeroCanvas';
 import Link from 'next/link';

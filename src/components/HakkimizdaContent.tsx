@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { useLang, t } from '@/lib/i18n';
+import { useLang, t } from '@/components/LanguageProvider';
 import styles from './HakkimizdaContent.module.css';
 import { TeamMember, AboutPageData, Stat } from '@/lib/db';
 

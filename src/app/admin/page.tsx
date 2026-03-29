@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { getSiteData, SiteData, Stat } from '@/lib/db';
-import styles from './AdminPage.module.css';
+import styles from './admin.module.css';
 
 export default function AdminPage() {
   const [data, setData] = useState<SiteData | null>(null);
