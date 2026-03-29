@@ -1,5 +1,6 @@
 'use client';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useLang, t } from './LanguageProvider';
 import styles from './Footer.module.css';
 
@@ -18,6 +19,9 @@ interface FooterProps {
 
 export default function Footer({ data, genel }: FooterProps) {
   const { lang } = useLang();
+  const pathname = usePathname();
+
+  if (pathname.startsWith('/admin')) return null;
 
   // Custom SVG icon generator for socials
   const getSocialIcon = (network: string) => {

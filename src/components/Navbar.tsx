@@ -23,6 +23,8 @@ export default function Navbar({ data, logoUrl }: NavbarProps) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  if (pathname.startsWith('/admin')) return null;
+
   const links = data && data.length > 0 ? data.map(l => ({
     href: l.href,
     label: lang === 'tr' ? l.labelTR : l.labelEN
