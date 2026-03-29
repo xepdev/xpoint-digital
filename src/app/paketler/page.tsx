@@ -3,12 +3,12 @@ import { getSiteData } from '@/lib/db';
 import PaketlerContent from '@/components/PaketlerContent';
 
 export async function generateMetadata(): Promise<Metadata> {
-  const data = getSiteData();
+  const data = await getSiteData();
   const seo = data.seo?.sayfalar?.paketler || {};
   return { title: seo.title, description: seo.desc };
 }
 
-export default function PaketlerPage() {
-  const data = getSiteData();
+export default async function PaketlerPage() {
+  const data = await getSiteData();
   return <PaketlerContent paketler={data.paketler || []} />;
 }

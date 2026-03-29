@@ -4,8 +4,8 @@ import styles from './ServicesPage.module.css';
 
 export const dynamic = 'force-dynamic';
 
-export default function ServicesPage() {
-  const data = getSiteData();
+export default async function ServicesPage() {
+  const data = await getSiteData();
   const { hizmetler } = data;
 
   return (

@@ -11,7 +11,7 @@ export async function POST(req: Request) {
       return NextResponse.json({ success: false, message: 'Lütfen zorunlu alanları doldurun.' }, { status: 400 });
     }
 
-    const data = getSiteData();
+    const data = await getSiteData();
     
     const newMessage: ContactMessage = {
       id: uuidv4(),

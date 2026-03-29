@@ -1,7 +1,4 @@
-import fs from 'fs';
-import path from 'path';
-
-const DATA_PATH = path.join(process.cwd(), 'src/data/site-data.json');
+const FIREBASE_URL = 'https://xpoint-d7584-default-rtdb.firebaseio.com/site-data.json';
 
 export interface Service {
   icon: string;
@@ -195,40 +192,45 @@ const DEFAULT_DATA: SiteData = {
     values: []
   }
 };
-
-export function getSiteData(): SiteData {
+export async function getSiteData(): Promise<SiteData> {
   try {
-    const fileContents = fs.readFileSync(DATA_PATH, 'utf8');
-    const saved = JSON.parse(fileContents);
+    const res = await fetch(FIREBASE_URL, { cache: 'no-store' }); // Always fetch latest
+    if (!res.ok) throw new Error('Failed to fetch from Firebase');
+    const saved = await res.json();
+    
     // Deep merge: saved data overrides defaults, missing keys fall back to defaults
     return {
       ...DEFAULT_DATA,
       ...saved,
-      genel: { ...DEFAULT_DATA.genel, ...saved.genel, sosyalMedya: { ...DEFAULT_DATA.genel.sosyalMedya, ...(saved.genel?.sosyalMedya || {}) } },
-      seo: { ...DEFAULT_DATA.seo, ...saved.seo, global: { ...DEFAULT_DATA.seo.global, ...(saved.seo?.global || {}) }, sayfalar: { ...DEFAULT_DATA.seo.sayfalar, ...(saved.seo?.sayfalar || {}) } },
-      hizmetler: Array.isArray(saved.hizmetler) ? saved.hizmetler : [],
-      paketler: Array.isArray(saved.paketler) ? saved.paketler : [],
-      ekip: Array.isArray(saved.ekip) ? saved.ekip : [],
-      referanslar: Array.isArray(saved.referanslar) ? saved.referanslar : [],
-      yorumlar: Array.isArray(saved.yorumlar) ? saved.yorumlar : [],
-      mesajlar: Array.isArray(saved.mesajlar) ? saved.mesajlar : [],
-      iletisimKonulariTR: Array.isArray(saved.iletisimKonulariTR) ? saved.iletisimKonulariTR : [],
-      iletisimKonulariEN: Array.isArray(saved.iletisimKonulariEN) ? saved.iletisimKonulariEN : [],
-      layout: saved.layout || DEFAULT_DATA.layout,
-      hakkimizda: saved.hakkimizda || DEFAULT_DATA.hakkimizda,
+      genel: { ...DEFAULT_DATA.genel, ...saved?.genel, sosyalMedya: { ...DEFAULT_DATA.genel.sosyalMedya, ...(saved?.genel?.sosyalMedya || {}) } },
+      seo: { ...DEFAULT_DATA.seo, ...saved?.seo, global: { ...DEFAULT_DATA.seo.global, ...(saved?.seo?.global || {}) }, sayfalar: { ...DEFAULT_DATA.seo.sayfalar, ...(saved?.seo?.sayfalar || {}) } },
+      hizmetler: Array.isArray(saved?.hizmetler) ? saved.hizmetler : [],
+      paketler: Array.isArray(saved?.paketler) ? saved.paketler : [],
+      ekip: Array.isArray(saved?.ekip) ? saved.ekip : [],
+      referanslar: Array.isArray(saved?.referanslar) ? saved.referanslar : [],
+      yorumlar: Array.isArray(saved?.yorumlar) ? saved.yorumlar : [],
+      mesajlar: Array.isArray(saved?.mesajlar) ? saved.mesajlar : [],
+      iletisimKonulariTR: Array.isArray(saved?.iletisimKonulariTR) ? saved.iletisimKonulariTR : [],
+      iletisimKonulariEN: Array.isArray(saved?.iletisimKonulariEN) ? saved.iletisimKonulariEN : [],
+      layout: saved?.layout || DEFAULT_DATA.layout,
+      hakkimizda: saved?.hakkimizda || DEFAULT_DATA.hakkimizda,
     };
   } catch (error) {
-    console.error('Error reading site data:', error);
+    console.error('Error reading site data from Firebase:', error);
     return DEFAULT_DATA;
   }
 }
 
-export function saveSiteData(data: SiteData) {
+export async function saveSiteData(data: SiteData): Promise<boolean> {
   try {
-    fs.writeFileSync(DATA_PATH, JSON.stringify(data, null, 2), 'utf8');
-    return true;
+    const res = await fetch(FIREBASE_URL, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    });
+    return res.ok;
   } catch (error) {
-    console.error('Error saving site data:', error);
+    console.error('Error saving site data to Firebase:', error);
     return false;
   }
 }

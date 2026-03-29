@@ -3,7 +3,7 @@ import { getSiteData } from '@/lib/db';
 import HomeContent from '@/components/HomeContent';
 
 export async function generateMetadata(): Promise<Metadata> {
-  const data = getSiteData();
+  const data = await getSiteData();
   const seo = data.seo?.sayfalar?.anaSayfa || {};
   return {
     title: seo.title || data.seo?.global?.siteTitle,
@@ -11,8 +11,8 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-export default function HomePage() {
-  const data = getSiteData();
+export default async function HomePage() {
+  const data = await getSiteData();
   return (
     <HomeContent 
       hizmetler={data.hizmetler || []} 

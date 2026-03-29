@@ -6,8 +6,8 @@ interface ServicePageProps {
   params: { slug: string };
 }
 
-export default function ServicePage({ params }: ServicePageProps) {
-  const data = getSiteData();
+export default async function ServicePage({ params }: ServicePageProps) {
+  const data = await getSiteData();
   const service = data.hizmetler.find(h => h.slug === params.slug);
 
   if (!service) notFound();

@@ -9,7 +9,7 @@ import LanguageProvider from '@/components/LanguageProvider';
 export const dynamic = 'force-dynamic';
 
 export async function generateMetadata(): Promise<Metadata> {
-  const data = getSiteData();
+  const data = await getSiteData();
   return {
     title: { default: data.seo?.global?.siteTitle || 'XPOINT DIGITAL', template: `%s | ${data.seo?.global?.siteTitle}` },
     description: data.seo?.global?.siteDesc,
@@ -17,8 +17,8 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
-  const data = getSiteData();
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const data = await getSiteData();
   return (
     <html lang="tr">
       <body>

@@ -4,7 +4,7 @@ import { getSiteData, saveSiteData } from '@/lib/db';
 const ADMIN_PASSWORD = 'admin'; 
 
 export async function GET() {
-  const data = getSiteData();
+  const data = await getSiteData();
   return NextResponse.json(data);
 }
 
@@ -16,7 +16,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ success: false, message: 'Yetkisiz erişim!' }, { status: 403 });
     }
 
-    const success = saveSiteData(data);
+    const success = await saveSiteData(data);
     if (success) {
       return NextResponse.json({ success: true, message: 'Veriler başarıyla kaydedildi!' });
     } else {
