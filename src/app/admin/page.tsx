@@ -22,7 +22,7 @@ export default function AdminPage() {
       const res = await fetch('/api/data', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data)
+        body: JSON.stringify({ data, password: 'admin' })
       });
       if (res.ok) {
         setSaveStatus('success');
@@ -265,6 +265,109 @@ export default function AdminPage() {
                   <div className={styles.formGroup}><label>Site Başlığı</label><input value={data.seo.global.siteTitle} onChange={(e) => updateField('seo.global.siteTitle', e.target.value)} /></div>
                   <div className={styles.formGroup}><label>Site Açıklaması</label><textarea value={data.seo.global.siteDesc} onChange={(e) => updateField('seo.global.siteDesc', e.target.value)} /></div>
                 </div>
+              </div>
+            </div>
+          )}
+
+          {activeTab === 'hizmetler' && (
+            <div className={styles.adminFormSection}>
+              <div className={styles.sectionGroup}>
+                <h3>Hizmetler (Services)</h3>
+                <div className={styles.itemGrid}>
+                  {(data?.hizmetler || []).map((h, i) => (
+                    <div key={i} className={styles.itemCard}>
+                      <button className={styles.removeItemBtn} onClick={() => removeItem('hizmetler', i)}>✕</button>
+                      <div className={styles.formGroup}><label>İkon (Emoji)</label><input value={h.icon} onChange={(e) => updateListItem('hizmetler', i, 'icon', e.target.value)} /></div>
+                      <div className={styles.formGroup} style={{marginTop:'10px'}}><label>URL Slug (ör: web-tasarim)</label><input value={h.slug} onChange={(e) => updateListItem('hizmetler', i, 'slug', e.target.value)} /></div>
+                      <div className={styles.formGroup} style={{marginTop:'10px'}}><label>Title TR</label><input value={h.titleTR} onChange={(e) => updateListItem('hizmetler', i, 'titleTR', e.target.value)} /></div>
+                      <div className={styles.formGroup} style={{marginTop:'10px'}}><label>Title EN</label><input value={h.titleEN} onChange={(e) => updateListItem('hizmetler', i, 'titleEN', e.target.value)} /></div>
+                      <div className={styles.formGroup} style={{marginTop:'10px'}}><label>Kısa Açıklama TR</label><textarea value={h.descTR} onChange={(e) => updateListItem('hizmetler', i, 'descTR', e.target.value)} /></div>
+                      <div className={styles.formGroup} style={{marginTop:'10px'}}><label>Kısa Açıklama EN</label><textarea value={h.descEN} onChange={(e) => updateListItem('hizmetler', i, 'descEN', e.target.value)} /></div>
+                      <div className={styles.formGroup} style={{marginTop:'10px'}}><label>Detaylı Açıklama TR</label><textarea value={h.longDescTR} onChange={(e) => updateListItem('hizmetler', i, 'longDescTR', e.target.value)} /></div>
+                      <div className={styles.formGroup} style={{marginTop:'10px'}}><label>Detaylı Açıklama EN</label><textarea value={h.longDescEN} onChange={(e) => updateListItem('hizmetler', i, 'longDescEN', e.target.value)} style={{minHeight:'150px'}} /></div>
+                    </div>
+                  ))}
+                </div>
+                <button className={styles.addItemBtn} onClick={() => addItem('hizmetler', { icon:'🚀', slug:'yeni-hizmet', titleTR:'Yeni Hizmet', titleEN:'New Service', descTR:'', descEN:'', longDescTR:'', longDescEN:'' })}>+ Hizmet Ekle</button>
+              </div>
+            </div>
+          )}
+
+          {activeTab === 'paketler' && (
+            <div className={styles.adminFormSection}>
+              <div className={styles.sectionGroup}>
+                <h3>Paketler (Pricing)</h3>
+                <div className={styles.itemGrid}>
+                  {(data?.paketler || []).map((p, i) => (
+                    <div key={i} className={styles.itemCard}>
+                      <button className={styles.removeItemBtn} onClick={() => removeItem('paketler', i)}>✕</button>
+                      <div className={styles.formGrid}>
+                        <div className={styles.formGroup}><label>Paket Adı TR</label><input value={p.nameTR} onChange={(e) => updateListItem('paketler', i, 'nameTR', e.target.value)} /></div>
+                        <div className={styles.formGroup}><label>Paket Adı EN</label><input value={p.nameEN} onChange={(e) => updateListItem('paketler', i, 'nameEN', e.target.value)} /></div>
+                      </div>
+                      <div className={styles.formGrid} style={{marginTop:'10px'}}>
+                        <div className={styles.formGroup}><label>Fiyat TR</label><input value={p.priceTR} onChange={(e) => updateListItem('paketler', i, 'priceTR', e.target.value)} /></div>
+                        <div className={styles.formGroup}><label>Fiyat EN</label><input value={p.priceEN} onChange={(e) => updateListItem('paketler', i, 'priceEN', e.target.value)} /></div>
+                      </div>
+                      <div className={styles.formGroup} style={{marginTop:'10px'}}><label>Renk Kodu (ör: #6C63FF)</label><input value={p.color} onChange={(e) => updateListItem('paketler', i, 'color', e.target.value)} /></div>
+                      <label style={{display:'flex', alignItems:'center', gap:'10px', marginTop:'15px', color:'#fff', cursor:'pointer'}}>
+                        <input type="checkbox" checked={p.popular} onChange={(e) => updateListItem('paketler', i, 'popular', e.target.checked)} style={{width:'auto'}} />
+                        En Popüler (Rozet)
+                      </label>
+                      <div className={styles.formGroup} style={{marginTop:'15px'}}><label>Özellikler TR (Virgülle ayırın)</label><textarea value={(p.featuresTR || []).join(', ')} onChange={(e) => updateListItem('paketler', i, 'featuresTR', e.target.value.split(',').map(s=>s.trim()).filter(Boolean))} /></div>
+                      <div className={styles.formGroup} style={{marginTop:'10px'}}><label>Özellikler EN (Virgülle ayırın)</label><textarea value={(p.featuresEN || []).join(', ')} onChange={(e) => updateListItem('paketler', i, 'featuresEN', e.target.value.split(',').map(s=>s.trim()).filter(Boolean))} /></div>
+                    </div>
+                  ))}
+                </div>
+                <button className={styles.addItemBtn} onClick={() => addItem('paketler', { nameTR:'Yeni Paket', nameEN:'New Package', priceTR:'₺0', priceEN:'$0', popular:false, color:'#fff', featuresTR:[], featuresEN:[] })}>+ Paket Ekle</button>
+              </div>
+            </div>
+          )}
+
+          {activeTab === 'ekip' && (
+            <div className={styles.adminFormSection}>
+              <div className={styles.sectionGroup}>
+                <h3>Ekip Üyeleri (Team)</h3>
+                <div className={styles.itemGrid}>
+                  {(data?.ekip || []).map((e, i) => (
+                    <div key={i} className={styles.itemCard}>
+                      <button className={styles.removeItemBtn} onClick={() => removeItem('ekip', i)}>✕</button>
+                      <div className={styles.formGroup}><label>İkon/Fotoğraf URL (Emoji de olabilir)</label><input value={e.icon} onChange={(ev) => updateListItem('ekip', i, 'icon', ev.target.value)} /></div>
+                      <div className={styles.formGroup} style={{marginTop:'10px'}}><label>İsim</label><input value={e.name} onChange={(ev) => updateListItem('ekip', i, 'name', ev.target.value)} /></div>
+                      <div className={styles.formGrid} style={{marginTop:'10px'}}>
+                        <div className={styles.formGroup}><label>Rol TR</label><input value={e.roleTR} onChange={(ev) => updateListItem('ekip', i, 'roleTR', ev.target.value)} /></div>
+                        <div className={styles.formGroup}><label>Rol EN</label><input value={e.roleEN} onChange={(ev) => updateListItem('ekip', i, 'roleEN', ev.target.value)} /></div>
+                      </div>
+                      <div className={styles.formGroup} style={{marginTop:'10px'}}><label>Biyografi TR</label><textarea value={e.bioTR} onChange={(ev) => updateListItem('ekip', i, 'bioTR', ev.target.value)} /></div>
+                      <div className={styles.formGroup} style={{marginTop:'10px'}}><label>Biyografi EN</label><textarea value={e.bioEN} onChange={(ev) => updateListItem('ekip', i, 'bioEN', ev.target.value)} /></div>
+                    </div>
+                  ))}
+                </div>
+                <button className={styles.addItemBtn} onClick={() => addItem('ekip', { name:'Yeni Üye', roleTR:'Rol', roleEN:'Role', bioTR:'', bioEN:'', icon:'👨‍💼' })}>+ Üye Ekle</button>
+              </div>
+            </div>
+          )}
+
+          {activeTab === 'referanslar' && (
+            <div className={styles.adminFormSection}>
+              <div className={styles.sectionGroup}>
+                <h3>Referanslar (References)</h3>
+                <div className={styles.itemGrid}>
+                  {(data?.referanslar || []).map((r, i) => (
+                    <div key={i} className={styles.itemCard}>
+                      <button className={styles.removeItemBtn} onClick={() => removeItem('referanslar', i)}>✕</button>
+                      <div className={styles.formGroup}><label>Logo/İkon</label><input value={r.icon} onChange={(e) => updateListItem('referanslar', i, 'icon', e.target.value)} /></div>
+                      <div className={styles.formGroup} style={{marginTop:'10px'}}><label>Müşteri/Marka İsmi</label><input value={r.name} onChange={(e) => updateListItem('referanslar', i, 'name', e.target.value)} /></div>
+                      <div className={styles.formGrid} style={{marginTop:'10px'}}>
+                        <div className={styles.formGroup}><label>Sektör TR</label><input value={r.industryTR} onChange={(e) => updateListItem('referanslar', i, 'industryTR', e.target.value)} /></div>
+                        <div className={styles.formGroup}><label>Sektör EN</label><input value={r.industryEN} onChange={(e) => updateListItem('referanslar', i, 'industryEN', e.target.value)} /></div>
+                      </div>
+                      <div className={styles.formGroup} style={{marginTop:'10px'}}><label>Sonuç TR</label><textarea value={r.resultTR} onChange={(e) => updateListItem('referanslar', i, 'resultTR', e.target.value)} /></div>
+                      <div className={styles.formGroup} style={{marginTop:'10px'}}><label>Sonuç EN</label><textarea value={r.resultEN} onChange={(e) => updateListItem('referanslar', i, 'resultEN', e.target.value)} /></div>
+                    </div>
+                  ))}
+                </div>
+                <button className={styles.addItemBtn} onClick={() => addItem('referanslar', { name:'Yeni Müşteri', industryTR:'', industryEN:'', resultTR:'', resultEN:'', icon:'🏢' })}>+ Referans Ekle</button>
               </div>
             </div>
           )}
