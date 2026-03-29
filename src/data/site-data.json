@@ -10,8 +10,8 @@
     "mapUrl": "https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d3205.5976553949577!2d32.0451!3d36.5397!3m2!1i1024!2i768!4f13.1!2m1!1sAlk%C3%BC%20Hastane%20Cd.%2017%2C%2007400%20Antalya%2C%20Alanya%20T%C3%BCrkiye!5e0!3m2!1str!2str!4v1774705226255!5m2!1str!2str\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade",
     "analyticsId": "",
     "sosyalMedya": {
-      "instagram": "https://instagram.com/xpointdigital",
-      "facebook": "https://facebook.com/xpointdigital",
+      "instagram": "https://www.instagram.com/xpointdigital?igsh=MW12Mmd2ZDZjNGRleg==",
+      "facebook": "https://www.facebook.com/share/1CbtS4GUmj/?mibextid=wwXIfr",
       "youtube": "",
       "linkedin": "https://linkedin.com/company/xpointdigital"
     }
@@ -114,79 +114,91 @@
   ],
   "paketler": [
     {
-      "nameTR": "STARTER",
-      "nameEN": "STARTER",
-      "priceTR": "4.999₺",
-      "priceEN": "$199",
+      "nameTR": "LİTE PAKET",
+      "nameEN": "LITE PACKAGE",
+      "priceTR": "Teklif Alınız",
+      "priceEN": "Get Quote",
       "popular": false,
       "color": "#6C63FF",
       "featuresTR": [
-        "Sosyal Medya Yönetimi (3 platform)",
-        "Aylık 12 İçerik",
-        "Temel SEO Analizi",
-        "Aylık Rapor"
+        "Instagram & Facebook Yönetimi",
+        "Profesyonel Görsel Post (4 Adet)",
+        "Reels Video (2 Adet)",
+        "Drone Çekimi",
+        "Özel Günler Grafik Tasarımı"
       ],
       "featuresEN": [
-        "Social Media Management (3 platforms)",
-        "12 Posts/Month",
-        "Basic SEO Analysis",
-        "Monthly Report"
-      ],
-      "notIncludedTR": [
-        "Video Prodüksiyon",
-        "Google Ads Yönetimi"
-      ],
-      "notIncludedEN": [
-        "Video Production",
-        "Google Ads Management"
-      ]
-    },
-    {
-      "nameTR": "GROWTH",
-      "nameEN": "GROWTH",
-      "priceTR": "9.999₺",
-      "priceEN": "$399",
-      "popular": true,
-      "color": "#00D4FF",
-      "featuresTR": [
-        "Sosyal Medya Yönetimi (5 platform)",
-        "Aylık 20 İçerik",
-        "Kapsamlı SEO",
-        "Google & Meta Ads",
-        "Haftalık Rapor"
-      ],
-      "featuresEN": [
-        "Social Media Management (5 platforms)",
-        "20 Posts/Month",
-        "Full SEO",
-        "Google & Meta Ads",
-        "Weekly Report"
+        "Instagram & Facebook Management",
+        "Professional Visual Post (4 Units)",
+        "Reels Video (2 Units)",
+        "Drone Shooting",
+        "Special Days Graphic Design"
       ],
       "notIncludedTR": [],
       "notIncludedEN": []
     },
     {
-      "nameTR": "ENTERPRISE",
-      "nameEN": "ENTERPRISE",
-      "priceTR": "19.999₺",
-      "priceEN": "$799",
+      "nameTR": "STANDART PAKET",
+      "nameEN": "STANDARD PACKAGE",
+      "priceTR": "Teklif Alınız",
+      "priceEN": "Get Quote",
+      "popular": true,
+      "color": "#00D4FF",
+      "featuresTR": [
+        "Instagram & Facebook Yönetimi",
+        "Meta Reklam Yönetimi",
+        "Profesyonel Görsel Post (8 Adet)",
+        "Reels Video (4 Adet)",
+        "Drone Çekimi",
+        "Özel Günler Grafik Tasarımı",
+        "Google Maps (MyBusiness) Yönetimi",
+        "Aylık Raporlama"
+      ],
+      "featuresEN": [
+        "Instagram & Facebook Management",
+        "Meta Ads Management",
+        "Professional Visual Post (8 Units)",
+        "Reels Video (4 Units)",
+        "Drone Shooting",
+        "Special Days Graphic Design",
+        "Google Maps (MyBusiness) Management",
+        "Monthly Reporting"
+      ],
+      "notIncludedTR": [],
+      "notIncludedEN": []
+    },
+    {
+      "nameTR": "PREMIUM PAKET",
+      "nameEN": "PREMIUM PACKAGE",
+      "priceTR": "Teklif Alınız",
+      "priceEN": "Get Quote",
       "popular": false,
       "color": "#9B59B6",
       "featuresTR": [
-        "Tüm Platformlar",
-        "Sınırsız İçerik",
-        "Tam SEO + Teknik",
-        "Video Prodüksiyon",
-        "Öncelikli Destek",
-        "Anlık Raporlama"
+        "Instagram & Facebook Yönetimi",
+        "Meta Reklam Yönetimi",
+        "Markaya Uygun İçerik Üretimi",
+        "Profesyonel Görsel Post (12 Adet)",
+        "Reels Video (4 Adet)",
+        "Kurumsal Tanıtım Videosu (1 Adet)",
+        "Drone Çekimi",
+        "Özel Günler Grafik Tasarımı",
+        "Google Maps (MyBusiness) Yönetimi",
+        "Seslendirme Özel Video",
+        "Aylık Raporlama"
       ],
       "featuresEN": [
-        "All Platforms",
-        "Unlimited Content",
-        "Full SEO + Technical",
-        "Video Production",
-        "Priority Support",
-        "Real-time Reporting"
+        "Instagram & Facebook Management",
+        "Meta Ads Management",
+        "Brand-Specific Content Production",
+        "Professional Visual Post (12 Units)",
+        "Reels Video (4 Units)",
+        "Corporate Promo Video (1 Unit)",
+        "Drone Shooting",
+        "Special Days Graphic Design",
+        "Google Maps (MyBusiness) Management",
+        "Custom Voiceover Video",
+        "Monthly Reporting"
       ],
       "notIncludedTR": [],
       "notIncludedEN": []
@@ -194,33 +206,25 @@
   ],
   "ekip": [
     {
-      "name": "Serkan Yıldız",
-      "roleTR": "Kurucu & Stratejist",
-      "roleEN": "Founder & Strategist",
-      "bioTR": "Dijital pazarlama alanında 10+ yıl deneyim.",
-      "bioEN": "10+ years of experience in digital marketing.",
+      "name": "Emre Özkorkmaz",
+      "roleTR": "Kurucu",
+      "roleEN": "Founder",
+      "bioTR": "",
+      "bioEN": "",
       "icon": "👨‍💼"
     },
     {
-      "name": "Ayşe Kara",
-      "roleTR": "İçerik & SEO Uzmanı",
-      "roleEN": "Content & SEO Specialist",
-      "bioTR": "100+ markanın içerik stratejisini yönetmiştir.",
-      "bioEN": "Has managed content strategies for 100+ brands.",
-      "icon": "👩‍💻"
+      "name": "Şükrü bağışlar",
+      "roleTR": "Uzman Kadro",
+      "roleEN": "Expert Staff",
+      "bioTR": "",
+      "bioEN": "",
+      "icon": "👨‍💼"
     },
     {
-      "name": "Mert Demir",
-      "roleTR": "Sosyal Medya Yöneticisi",
-      "roleEN": "Social Media Manager",
-      "bioTR": "Viral içerikler ve stratejik yayın planlarında uzman.",
-      "bioEN": "Expert in viral content and strategic posting plans.",
-      "icon": "📱"
-    },
-    {
-      "name": "İsim",
-      "roleTR": "Rol",
-      "roleEN": "Role",
+      "name": "Mehmet ali Abaylı",
+      "roleTR": "Uzman Kadro",
+      "roleEN": "Expert Staff",
       "bioTR": "",
       "bioEN": "",
       "icon": "👨‍💼"
@@ -447,12 +451,12 @@
     }
   },
   "hakkimizda": {
-    "titleTR": "Dijitalde ",
-    "titleEN": "Your Partner in ",
-    "subtitleTR": "İmzası Olan Ekip",
-    "subtitleEN": "Digital Growth",
-    "descriptionTR": "Genç, dinamik ve her biri kendi alanında uzman ekibimizle markanızın dijital yolculuğuna rehberlik ediyoruz. Amacımız sadece bir ajans olmak değil, markanızın büyüme ortağı olmaktır.",
-    "descriptionEN": "Guided by our young, dynamic team of experts, we lead your brand's digital journey. Our goal is not just to be an agency, but your brand's growth partner.",
+    "titleTR": "BİZ ",
+    "titleEN": "WHO ",
+    "subtitleTR": "KİMİZ?",
+    "subtitleEN": "ARE WE?",
+    "descriptionTR": "Xpoint digital, 11 yıllık deneyimi ve Uzman kadrosuyla markaların Dijital dünyada büyümesini sağlayan Profesyonel bir dijital ajanstır.\\n\\nSosyal medya yönetimi, ınstagram & Facebook içerik üretimi, meta ve Google ads reklam yönetimi, Grafik tasarım, web sitesi kurulumu Ve yönetimi ile profesyonel drone Çekimleri alanlarında hizmet vermektedir.\\n\\nSon teknoloji ekipmanlarla,\\nMarkalara yaratıcı ve sonuç odaklı Dijital çözümler sunar.",
+    "descriptionEN": "Xpoint Digital is a professional digital agency that ensures the growth of brands in the digital world with its 11 years of experience and expert staff.\\n\\nIt provides services in the fields of social media management, Instagram & Facebook content production, Meta and Google ads management, graphic design, website setup and management, and professional drone shooting.\\n\\nProvides creative and result-oriented digital solutions to brands with state-of-the-art equipment.",
     "valuesTitleTR": "Vizyonumuz & Değerlerimiz",
     "valuesTitleEN": "Our Vision & Values",
     "valuesSubtitleTR": "Bizi farklı kılan temel prensiplerimiz.",
