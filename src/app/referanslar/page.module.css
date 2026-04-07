@@ -20,53 +20,58 @@
 
 .header .section-subtitle { margin: 0 auto; }
 
-.refGrid {
+.logoMarquee {
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 28px;
+  z-index: 1;
+}
+
+.logoTrack {
+  display: flex;
+  gap: 18px;
+  width: max-content;
+  animation: logoSlide 28s linear infinite;
+}
+
+.logoGrid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  position: relative; z-index: 1;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  position: relative;
+  z-index: 1;
   margin-bottom: 100px;
 }
 
-.refCard {
+.logoCard {
+  min-width: 240px;
+  height: 130px;
   background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 20px;
-  padding: 28px;
-  text-align: center;
-  transition: all 0.3s ease;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+  transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
 }
 
-.refCard:hover {
+.logoCard:hover {
   background: rgba(108,99,255,0.07);
-  border-color: rgba(108,99,255,0.3);
+  border-color: rgba(108,99,255,0.35);
   transform: translateY(-4px);
   box-shadow: 0 16px 40px rgba(0,0,0,0.3);
 }
 
-.refEmoji { font-size: 2.5rem; margin-bottom: 12px; }
-
-.refName {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 16px; font-weight: 700;
-  color: white; margin-bottom: 6px;
+.logoImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
-.refIndustry {
-  font-size: 13px;
-  color: rgba(255,255,255,0.45);
-  margin-bottom: 14px;
-}
-
-.refResult {
-  display: inline-block;
-  padding: 6px 14px;
-  background: rgba(108,99,255,0.15);
-  border: 1px solid rgba(108,99,255,0.25);
-  border-radius: 99px;
-  font-size: 12px; font-weight: 700;
-  color: #6C63FF;
-  letter-spacing: 0.02em;
+@keyframes logoSlide {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 
 .testimonialSection { position: relative; z-index: 1; }
@@ -134,11 +139,15 @@
 }
 
 @media (max-width: 1024px) {
-  .refGrid { grid-template-columns: repeat(2, 1fr); }
+  .logoGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .testimonialGrid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 640px) {
-  .refGrid { grid-template-columns: 1fr; }
+  .logoGrid { grid-template-columns: 1fr; }
   .testimonialGrid { grid-template-columns: 1fr; }
+  .logoCard {
+    min-width: 200px;
+    height: 120px;
+  }
 }

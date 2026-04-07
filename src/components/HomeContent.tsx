@@ -6,6 +6,8 @@ import styles from '@/app/page.module.css';
 import { Stat, Service, Package, TeamMember, Reference, Testimonial } from '@/lib/db';
 import HeroCanvas from './HeroCanvas';
 import Link from 'next/link';
+import Image from 'next/image';
+import { brandReferences } from '@/data/brand-references';
 
 interface HomeContentProps {
   hizmetler: Service[];
@@ -27,6 +29,7 @@ export default function HomeContent({
   stats 
 }: HomeContentProps) {
   const { lang } = useLang();
+  const marqueeBrands = [...brandReferences, ...brandReferences];
 
   return (
     <div className={styles.home}>
@@ -145,21 +148,40 @@ export default function HomeContent({
         </div>
       </section>
 
-      {/* TESTIMONIALS SECTION */}
-      <section className={styles.testimonialsSection + " section-padding"}>
+      {/* REFERENCES MARQUEE SECTION */}
+      <section className={styles.referencesSection + " section-padding"}>
         <div className="container">
           <div className={styles.sectionHeader}>
-            <div className="section-tag">{t('Yorumlar', 'Testimonials', lang)}</div>
-            <h2 className="section-title">{t('Müşterilerimiz Ne Diyor?', 'What Customers Say?', lang)}</h2>
+            <div className="section-tag">{t('Referanslarımız', 'Our References', lang)}</div>
+            <h2 className="section-title">{t('Birlikte Çalıştığımız Markalar', 'Brands We Work With', lang)}</h2>
           </div>
-          <div className={styles.testimonialsGrid}>
-            {(yorumlar || []).slice(0, 3).map((item, i) => (
-              <div key={i} className={styles.testimonialCard}>
-                <p>"{lang === 'tr' ? item.textTR : item.textEN}"</p>
-                <div className={styles.testimonialAuthor}>
-                  <strong>{item.name}</strong>
-                  <span>{lang === 'tr' ? item.roleTR : item.roleEN}</span>
+
+          <div className={styles.logoMarquee}>
+            <div className={styles.logoTrack}>
+              {marqueeBrands.map((brand, i) => (
+                <div key={`${brand.name}-${i}`} className={styles.logoCard}>
+                  <Image
+                    src={brand.logo}
+                    alt={brand.name}
+                    width={220}
+                    height={120}
+                    className={styles.logoImage}
+                  />
                 </div>
+              ))}
+            </div>
+          </div>
+
+          <div className={styles.logoGrid}>
+            {brandReferences.map((brand) => (
+              <div key={brand.name} className={styles.logoCard}>
+                <Image
+                  src={brand.logo}
+                  alt={brand.name}
+                  width={220}
+                  height={120}
+                  className={styles.logoImage}
+                />
               </div>
             ))}
           </div>

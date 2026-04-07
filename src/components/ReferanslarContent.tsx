@@ -1,6 +1,8 @@
 'use client';
 import { useLang, t } from '@/components/LanguageProvider';
 import styles from '@/app/referanslar/page.module.css';
+import Image from 'next/image';
+import { brandReferences } from '@/data/brand-references';
 
 interface ReferanslarContentProps {
   referanslar: any[];
@@ -9,6 +11,7 @@ interface ReferanslarContentProps {
 
 export default function ReferanslarContent({ referanslar, yorumlar }: ReferanslarContentProps) {
   const { lang } = useLang();
+  const marqueeBrands = [...brandReferences, ...brandReferences];
 
   return (
     <div className={styles.page}>
@@ -31,13 +34,32 @@ export default function ReferanslarContent({ referanslar, yorumlar }: Referansla
           </p>
         </div>
 
-        <div className={styles.refGrid}>
-          {referanslar.map((ref, i) => (
-            <div key={i} className={styles.refCard}>
-              <div className={styles.refEmoji}>{ref.icon || '🚀'}</div>
-              <h3 className={styles.refName}>{ref.name}</h3>
-              <div className={styles.refIndustry}>{lang === 'tr' ? ref.industryTR : ref.industryEN}</div>
-              <div className={styles.refResult}>{lang === 'tr' ? ref.resultTR : ref.resultEN}</div>
+        <div className={styles.logoMarquee}>
+          <div className={styles.logoTrack}>
+            {marqueeBrands.map((brand, i) => (
+              <div key={`${brand.name}-${i}`} className={styles.logoCard}>
+                <Image
+                  src={brand.logo}
+                  alt={brand.name}
+                  width={240}
+                  height={130}
+                  className={styles.logoImage}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className={styles.logoGrid}>
+          {brandReferences.map((brand) => (
+            <div key={brand.name} className={styles.logoCard}>
+              <Image
+                src={brand.logo}
+                alt={brand.name}
+                width={240}
+                height={130}
+                className={styles.logoImage}
+              />
             </div>
           ))}
         </div>
