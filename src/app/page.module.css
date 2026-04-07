@@ -278,6 +278,10 @@
   flex-wrap: wrap;
 }
 
+.ctaContent {
+  flex: 1 1 320px;
+}
+
 .ctaTitle {
   font-family: 'Space Grotesk', sans-serif;
   font-size: clamp(1.5rem, 3vw, 2.2rem);
@@ -288,6 +292,31 @@
 .ctaDesc {
   color: rgba(255,255,255,0.55);
   font-size: 16px;
+}
+
+.ctaMapCard {
+  flex: 1 1 520px;
+  max-width: 640px;
+  width: 100%;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 18px;
+  padding: 12px;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.35);
+}
+
+.ctaMap {
+  width: 100%;
+  height: 260px;
+  border: 0;
+  border-radius: 12px;
+}
+
+.ctaActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 12px;
 }
 
 /* MAP */
@@ -313,6 +342,10 @@
   .statsGrid { grid-template-columns: repeat(2, 1fr); }
   .servicesGrid { grid-template-columns: 1fr; }
   .ctaInner { flex-direction: column; text-align: center; }
+  .ctaActions {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 }
 
 @media (max-width: 480px) {

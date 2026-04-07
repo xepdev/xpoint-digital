@@ -170,11 +170,30 @@ export default function HomeContent({
       <section className={styles.ctaBand}>
         <div className="container">
           <div className={styles.ctaInner}>
-            <div>
+            <div className={styles.ctaContent}>
               <h2 className={styles.ctaTitle}>{t('Projenizi Başlatın', 'Start Your Project', lang)}</h2>
               <p className={styles.ctaDesc}>{t('Hemen bizimle iletişime geçin ve dijital dönüşümü başlatın.', 'Contact us now and start the digital transformation.', lang)}</p>
             </div>
-            <Link href="/iletisim" className="btn-primary">{t('İletişime Geç', 'Contact Us', lang)}</Link>
+            <div className={styles.ctaMapCard}>
+              <iframe
+                title="Xpoint Digital Konum"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3205.61175987339!2d32.04506080000001!3d36.53935980000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14dc9b99f08770bd%3A0x9e7bea195913bd2c!2sXpoint%20Digital%20-%20Alanya%20Sosyal%20Medya%20Ajans%C4%B1!5e0!3m2!1str!2str!4v1775591956485!5m2!1str!2str"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className={styles.ctaMap}
+              />
+              <div className={styles.ctaActions}>
+                <a
+                  href="https://share.google/aOxCmeQGF9HHUtO2H"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-secondary"
+                >
+                  {t('Haritada Aç', 'Open in Maps', lang)}
+                </a>
+                <Link href="/iletisim" className="btn-primary">{t('İletişime Geç', 'Contact Us', lang)}</Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>
