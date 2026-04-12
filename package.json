@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "make:logos": "ts-node scripts/make-transparent-logos.ts",
     "start": "next start"
   },
   "dependencies": {
@@ -20,6 +21,8 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "sharp": "^0.34.5",
+    "ts-node": "^10.9.2",
     "typescript": "^5"
   }
 }

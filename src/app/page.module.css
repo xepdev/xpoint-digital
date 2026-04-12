@@ -442,6 +442,27 @@
   margin-bottom: 32px;
 }
 
+.logoMarquee::before,
+.logoMarquee::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 120px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.logoMarquee::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(5,5,15,0.95) 0%, rgba(5,5,15,0) 100%);
+}
+
+.logoMarquee::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(5,5,15,0.95) 0%, rgba(5,5,15,0) 100%);
+}
+
 .logoTrack {
   display: flex;
   gap: 18px;
@@ -452,8 +473,8 @@
 .logoCard {
   min-width: 240px;
   height: 130px;
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.06);
   border-radius: 16px;
   display: flex;
   align-items: center;

@@ -4,11 +4,11 @@ export interface BrandReference {
 }
 
 export const brandReferences: BrandReference[] = [
-  { name: 'Eis Cafe Italia', logo: '/references/eis-cafe-italia.png' },
-  { name: 'Altinzade Kuyumculuk', logo: '/references/altinzade.png' },
-  { name: 'Sub-Station', logo: '/references/sub-station.png' },
-  { name: 'Musa GSM Repair', logo: '/references/musa-gsm.png' },
-  { name: 'Motto Lounge', logo: '/references/motto-lounge.png' },
-  { name: 'Sky', logo: '/references/sky.png' },
-  { name: 'Tesbih Iala', logo: '/references/tesbih-iala.png' },
+  { name: 'Eis Cafe Italia', logo: '/references/transparent/eis-cafe-italia.png' },
+  { name: 'Altinzade Kuyumculuk', logo: '/references/transparent/altinzade.png' },
+  { name: 'Sub-Station', logo: '/references/transparent/sub-station.png' },
+  { name: 'Musa GSM Repair', logo: '/references/transparent/musa-gsm.png' },
+  { name: 'Motto Lounge', logo: '/references/transparent/motto-lounge.png' },
+  { name: 'Sky', logo: '/references/transparent/sky.png' },
+  { name: 'Tesbih Iala', logo: '/references/transparent/tesbih-iala.png' },
 ];

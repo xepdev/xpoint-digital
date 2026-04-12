@@ -50,48 +50,7 @@ export default function ReferanslarContent({ referanslar, yorumlar }: Referansla
           </div>
         </div>
 
-        <div className={styles.logoGrid}>
-          {brandReferences.map((brand) => (
-            <div key={brand.name} className={styles.logoCard}>
-              <Image
-                src={brand.logo}
-                alt={brand.name}
-                width={240}
-                height={130}
-                className={styles.logoImage}
-              />
-            </div>
-          ))}
-        </div>
-
-        {/* Testimonials */}
-        <div className={styles.testimonialSection}>
-          <div className={styles.testimonialHeader} style={{textAlign: 'center'}}>
-            <div className="section-tag">💬 {t('Müşteri Yorumları', 'Client Reviews', lang)}</div>
-            <h2 className="section-title">
-              {t('Onlar Ne Dedi?', 'What Did They Say?', lang)}
-            </h2>
-          </div>
-          
-          <div className={styles.testimonialGrid}>
-            {yorumlar.map((test, i) => (
-              <div key={i} className={styles.testimonialCard}>
-                <div className={styles.stars}>
-                  {[1,2,3,4,5].map(s => <span key={s}>★</span>)}
-                </div>
-                <p className={styles.testimonialText}>"{lang === 'tr' ? test.textTR : test.textEN}"</p>
-                <div className={styles.testimonialAuthor}>
-                  <div className={styles.authorAvatar}>{(test.name || 'M')[0]}</div>
-                  <div>
-                    <div className={styles.authorName}>{test.name}</div>
-                    <div className={styles.authorRole}>{lang === 'tr' ? test.roleTR : test.roleEN}</div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
+        {/* Marquee contains all brands with the improved styling applied */}
       </div>
     </div>
   );

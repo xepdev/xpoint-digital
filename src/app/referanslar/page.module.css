@@ -27,46 +27,86 @@
   z-index: 1;
 }
 
+.logoMarquee::before,
+.logoMarquee::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 120px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.logoMarquee::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(5,5,15,0.95) 0%, rgba(5,5,15,0) 100%);
+}
+
+.logoMarquee::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(5,5,15,0.95) 0%, rgba(5,5,15,0) 100%);
+}
+
 .logoTrack {
   display: flex;
-  gap: 18px;
+  gap: 48px;
   width: max-content;
-  animation: logoSlide 28s linear infinite;
+  animation: logoSlide 40s linear infinite;
+  align-items: center;
 }
 
 .logoGrid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 18px;
+  gap: 32px;
   position: relative;
   z-index: 1;
-  margin-bottom: 100px;
+  margin-bottom: 120px;
 }
 
 .logoCard {
-  min-width: 240px;
-  height: 130px;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 18px;
+  min-width: 200px;
+  height: 140px;
+  background: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 14px;
-  transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+  padding: 10px;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  position: relative;
+}
+
+.logoCard::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(108,99,255,0.08) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: -1;
 }
 
 .logoCard:hover {
-  background: rgba(108,99,255,0.07);
-  border-color: rgba(108,99,255,0.35);
-  transform: translateY(-4px);
-  box-shadow: 0 16px 40px rgba(0,0,0,0.3);
+  transform: translateY(-8px) scale(1.05);
+}
+
+.logoCard:hover::after {
+  opacity: 1;
 }
 
 .logoImage {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  filter: grayscale(1) brightness(0.9) opacity(0.5);
+  mix-blend-mode: screen;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.logoCard:hover .logoImage {
+  filter: grayscale(0) brightness(1.1) opacity(1);
+  transform: scale(1.05);
 }
 
 @keyframes logoSlide {
@@ -139,15 +179,26 @@
 }
 
 @media (max-width: 1024px) {
-  .logoGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .logoGrid { 
+    grid-template-columns: repeat(3, minmax(0, 1fr)); 
+    gap: 20px;
+  }
   .testimonialGrid { grid-template-columns: repeat(2, 1fr); }
 }
 
-@media (max-width: 640px) {
-  .logoGrid { grid-template-columns: 1fr; }
-  .testimonialGrid { grid-template-columns: 1fr; }
+@media (max-width: 768px) {
+  .logoGrid { 
+    grid-template-columns: repeat(2, minmax(0, 1fr)); 
+    gap: 16px;
+  }
   .logoCard {
-    min-width: 200px;
-    height: 120px;
+    height: 100px;
+    min-width: unset;
+  }
+}
+
+@media (max-width: 480px) {
+  .logoGrid { 
+    grid-template-columns: 1fr; 
   }
 }
