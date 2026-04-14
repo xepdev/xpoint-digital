@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { getSiteData, saveSiteData } from '@/lib/db';
 
-const ADMIN_PASSWORD = 'admin'; 
+const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || 'admin'; 
 
 export async function GET() {
   const data = await getSiteData();

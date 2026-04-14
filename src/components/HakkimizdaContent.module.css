@@ -172,15 +172,28 @@
 }
 
 .memberPhoto {
-  width: 120px;
-  height: 120px;
+  width: 130px;
+  height: 130px;
   margin: 0 auto 24px;
   border-radius: 50%;
   background: radial-gradient(circle at bottom right, var(--member-color, #6C63FF) 0%, transparent 70%);
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid rgba(255, 255, 255, 0.1);
+  border: 3px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.memberImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.teamCard:hover .memberImage {
+  transform: scale(1.1);
 }
 
 .memberEmoji {
@@ -200,10 +213,38 @@
   letter-spacing: 0.5px;
 }
 
+.memberSocial {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.socialLink {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.socialLink:hover {
+  background: var(--member-color, #6C63FF);
+  transform: translateY(-3px);
+  color: #fff;
+}
+
 .memberDesc {
   color: #a1a1aa;
   line-height: 1.5;
   font-size: 0.95rem;
+  margin-top: 15px;
 }
 
 /* RESPONSIVE DESIGN */

@@ -48,7 +48,7 @@
 
 .statNum {
   display: block;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: var(--font-heading);
   font-size: 2.6rem;
   font-weight: 800;
   color: white;
@@ -90,7 +90,7 @@
 .valueIcon { font-size: 2rem; margin-bottom: 14px; }
 
 .valueTitle {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: var(--font-heading);
   font-size: 16px; font-weight: 700;
   color: white; margin-bottom: 10px;
 }
@@ -149,7 +149,7 @@
 .memberEmoji { font-size: 2.5rem; }
 
 .memberName {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: var(--font-heading);
   font-size: 18px; font-weight: 700;
   color: white; margin-bottom: 6px;
 }

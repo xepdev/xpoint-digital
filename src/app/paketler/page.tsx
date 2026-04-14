@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import { getSiteData } from '@/lib/db';
 import PaketlerContent from '@/components/PaketlerContent';
+export const dynamic = 'force-dynamic';
 
 export async function generateMetadata(): Promise<Metadata> {
   const data = await getSiteData();

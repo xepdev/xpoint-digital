@@ -18,7 +18,12 @@
   position: relative; z-index: 1;
 }
 
-.header .section-subtitle { margin: 0 auto; }
+.header .section-subtitle { margin: 0 auto; text-align: center; }
+
+.subtitle {
+  margin: 0 auto !important;
+  text-align: center !important;
+}
 
 .logoMarquee {
   overflow: hidden;
@@ -56,14 +61,6 @@
   align-items: center;
 }
 
-.logoGrid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 32px;
-  position: relative;
-  z-index: 1;
-  margin-bottom: 120px;
-}
 
 .logoCard {
   min-width: 200px;
@@ -107,6 +104,14 @@
 .logoCard:hover .logoImage {
   filter: grayscale(0) brightness(1.1) opacity(1);
   transform: scale(1.05);
+}
+
+.smallLogo {
+  transform: scale(0.7) !important;
+}
+
+.logoCard:hover .smallLogo {
+  transform: scale(0.75) !important;
 }
 
 @keyframes logoSlide {
@@ -178,27 +183,71 @@
   color: rgba(255,255,255,0.4);
 }
 
+.ctaSection {
+  padding: 100px 0;
+  position: relative;
+  z-index: 1;
+}
+
+.ctaCard {
+  background: linear-gradient(135deg, rgba(108,99,255,0.1) 0%, rgba(0,212,255,0.05) 100%);
+  border: 1px solid rgba(108,99,255,0.2);
+  border-radius: 32px;
+  padding: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  backdrop-filter: blur(10px);
+}
+
+.ctaContent {
+  flex: 1;
+}
+
+.ctaTitle {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: white;
+}
+
+.ctaDesc {
+  font-size: 18px;
+  color: rgba(255,255,255,0.6);
+  max-width: 500px;
+}
+
 @media (max-width: 1024px) {
   .logoGrid { 
     grid-template-columns: repeat(3, minmax(0, 1fr)); 
     gap: 20px;
   }
   .testimonialGrid { grid-template-columns: repeat(2, 1fr); }
+  
+  .ctaCard {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px;
+  }
+  
+  .ctaDesc {
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 768px) {
-  .logoGrid { 
-    grid-template-columns: repeat(2, minmax(0, 1fr)); 
-    gap: 16px;
-  }
+  /* ... removed logoGrid styles ... */
   .logoCard {
     height: 100px;
     min-width: unset;
   }
+  .ctaTitle {
+    font-size: 2rem;
+  }
 }
 
 @media (max-width: 480px) {
-  .logoGrid { 
-    grid-template-columns: 1fr; 
-  }
+  /* ... removed logoGrid styles ... */
 }

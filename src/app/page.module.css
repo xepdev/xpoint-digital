@@ -75,35 +75,42 @@
 }
 
 .heroTitle {
-  font-family: 'Space Grotesk', sans-serif;
-  line-height: 0.9;
+  font-family: var(--font-heading);
+  line-height: 1.2;
   margin-bottom: 32px;
   user-select: none;
+  text-transform: lowercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0;
+  padding-bottom: 10px;
 }
 
 .heroTitleLine1 {
-  display: block;
-  font-size: clamp(6rem, 18vw, 12rem);
-  font-weight: 900;
-  background: linear-gradient(135deg, #fff 30%, rgba(255,255,255,0.4) 100%);
+  display: inline-block;
+  font-size: clamp(3rem, 12vw, 8.5rem);
+  font-weight: 600;
+  background: linear-gradient(135deg, #fff 60%, rgba(255,255,255,0.7) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  letter-spacing: -0.05em;
-  filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.15));
+  letter-spacing: -0.04em;
+  padding-bottom: 0.1em;
 }
 
 .heroTitleLine2 {
-  display: block;
-  font-size: clamp(2.2rem, 6vw, 3.8rem);
-  font-weight: 500;
-  letter-spacing: 0.4em;
-  background: linear-gradient(90deg, #6C63FF, #00D4FF);
+  display: inline-block;
+  font-size: clamp(3rem, 12vw, 8.5rem);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  background: linear-gradient(90deg, #5A52FF, #00A3FF);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  margin-top: 8px;
-  filter: drop-shadow(0 0 15px rgba(108, 99, 255, 0.4));
+  filter: drop-shadow(0 0 20px rgba(90, 82, 255, 0.25));
+  padding-bottom: 0.1em;
 }
 
 .heroDesc {
@@ -176,10 +183,12 @@
   transition: background 0.3s;
 }
 
-.statCard:hover { background: rgba(108,99,255,0.06); }
+.statCard:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
 
 .statNum {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: var(--font-heading);
   font-size: 3rem;
   font-weight: 800;
   background: linear-gradient(135deg, #6C63FF, #00D4FF);
@@ -197,7 +206,16 @@
 }
 
 /* SERVICES */
-.servicesSection { background: var(--bg-primary); }
+.pricingSection {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background: var(--bg-primary);
+  position: relative;
+}
+
+.pricingSection .sectionHeader {
+  margin-top: 100px;
+}
 
 .sectionHeader {
   max-width: 600px;
@@ -211,10 +229,21 @@
 }
 
 .serviceCard {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08); /* Soft white border */
+  border-radius: var(--radius-lg);
   padding: 28px 24px;
   cursor: default;
   position: relative;
   overflow: hidden;
+  backdrop-filter: blur(4px); /* Slight transparency to see animation */
+  transition: all 0.4s ease;
+}
+
+.serviceCard:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-4px);
 }
 
 .serviceCard::before {
@@ -237,7 +266,7 @@
 }
 
 .serviceTitle {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: var(--font-heading);
   font-size: 16px;
   font-weight: 700;
   color: white;
@@ -283,7 +312,7 @@
 }
 
 .ctaTitle {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: var(--font-heading);
   font-size: clamp(1.5rem, 3vw, 2.2rem);
   font-weight: 700;
   margin-bottom: 8px;
@@ -427,10 +456,31 @@
   background: rgba(108, 99, 255, 0.05);
   transform: translateY(-5px);
 }
-.teamIcon {
-  font-size: 3rem;
-  margin-bottom: 20px;
+.memberPhoto {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  overflow: hidden;
+  border: 2px solid rgba(108, 99, 255, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.memberImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.memberEmoji {
+  font-size: 2.5rem;
+}
+.memberRole {
   display: block;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 4px;
 }
 
 /* REFERENCES */
@@ -494,11 +544,10 @@
   object-fit: contain;
 }
 
-.logoGrid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 18px;
+.smallLogo {
+  transform: scale(0.7) !important;
 }
+
 
 @keyframes logoSlide {
   from { transform: translateX(0); }
@@ -508,12 +557,10 @@
 @media (max-width: 900px) {
   .pricingGrid { grid-template-columns: 1fr; }
   .teamGrid { grid-template-columns: repeat(2, 1fr); }
-  .logoGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (max-width: 600px) {
   .teamGrid { grid-template-columns: 1fr; }
-  .logoGrid { grid-template-columns: 1fr; }
   .logoCard {
     min-width: 200px;
     height: 120px;

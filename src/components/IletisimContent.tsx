@@ -131,7 +131,13 @@ export default function IletisimContent({ genel, ekip, konular }: IletisimConten
               <div className={styles.teamList}>
                 {ekip.slice(0, 3).map((m, i) => (
                   <div key={i} className={styles.teamMini}>
-                    <div className={styles.teamMiniPhoto} style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)' }}>{m.icon}</div>
+                    <div className={styles.teamMiniPhoto}>
+                      {m.image ? (
+                        <img src={m.image} alt={m.name} className={styles.teamMiniImage} />
+                      ) : (
+                        <div className={styles.teamMiniEmoji}>{m.icon}</div>
+                      )}
+                    </div>
                     <div>
                       <div className={styles.teamMiniName}>{m.name}</div>
                       <div className={styles.teamMiniRole} style={{ color: 'rgba(255,255,255,0.5)' }}>{lang === 'tr' ? m.roleTR : m.roleEN}</div>

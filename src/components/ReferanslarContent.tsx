@@ -2,6 +2,7 @@
 import { useLang, t } from '@/components/LanguageProvider';
 import styles from '@/app/referanslar/page.module.css';
 import Image from 'next/image';
+import Link from 'next/link';
 import { brandReferences } from '@/data/brand-references';
 
 interface ReferanslarContentProps {
@@ -25,7 +26,7 @@ export default function ReferanslarContent({ referanslar, yorumlar }: Referansla
             {t('Güvenle Büyüttüğümüz ', 'Brands We ', lang)}
             <span className="gradient-text">{t('Markalar', 'Grow', lang)}</span>
           </h1>
-          <p className="section-subtitle">
+          <p className={`${styles.subtitle} section-subtitle`}>
             {t(
               'Dünya genelinde bir çok işletmenin dijital büyümesine katkı sağladık. Sizin markanız için de buradayız.',
               'We have contributed to the digital growth of many businesses worldwide. We are here for your brand too.',
@@ -43,7 +44,7 @@ export default function ReferanslarContent({ referanslar, yorumlar }: Referansla
                   alt={brand.name}
                   width={240}
                   height={130}
-                  className={styles.logoImage}
+                  className={`${styles.logoImage} ${brand.name.includes('Sub-Station') ? styles.smallLogo : ''}`}
                 />
               </div>
             ))}
@@ -52,6 +53,27 @@ export default function ReferanslarContent({ referanslar, yorumlar }: Referansla
 
         {/* Marquee contains all brands with the improved styling applied */}
       </div>
+
+      {/* CTA SECTION */}
+      <section className={styles.ctaSection}>
+        <div className="container">
+          <div className={styles.ctaCard}>
+            <div className={styles.ctaContent}>
+              <h2 className={styles.ctaTitle}>{t('Markanızı Beraber Büyütelim', 'Let\'s Grow Your Brand Together', lang)}</h2>
+              <p className={styles.ctaDesc}>
+                {t(
+                  'Dijital dünyadaki başarınızı profesyonel ellerde şekillendirin. Hemen bizimle iletişime geçin.',
+                  'Shape your success in the digital world with professional hands. Contact us now.',
+                  lang
+                )}
+              </p>
+            </div>
+            <Link href="/iletisim" className="btn-primary">
+              {t('Bizimle İletişime Geçin', 'Contact Us', lang)}
+            </Link>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

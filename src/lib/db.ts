@@ -1,4 +1,4 @@
-const FIREBASE_URL = 'https://xpoint-d7584-default-rtdb.firebaseio.com/site-data.json';
+const FIREBASE_URL = process.env.FIREBASE_URL || 'https://xpoint-d7584-default-rtdb.firebaseio.com/site-data.json';
 
 export interface Service {
   icon: string;
@@ -31,6 +31,7 @@ export interface TeamMember {
   bioTR: string;
   bioEN: string;
   icon: string;
+  image?: string;
 }
 
 export interface Reference {

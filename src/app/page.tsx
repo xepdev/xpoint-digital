@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import { getSiteData } from '@/lib/db';
 import HomeContent from '@/components/HomeContent';
+export const dynamic = 'force-dynamic';
 
 export async function generateMetadata(): Promise<Metadata> {
   const data = await getSiteData();

@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import { getSiteData } from '@/lib/db';
 import HakkimizdaContent from '@/components/HakkimizdaContent';
+export const dynamic = 'force-dynamic';
 
 export async function generateMetadata(): Promise<Metadata> {
   const data = await getSiteData();
@@ -15,6 +16,7 @@ export default async function HakkimizdaPage() {
       ekip={data.ekip || []} 
       hakkimizda={data.hakkimizda} 
       stats={data.stats || []} 
+      genel={data.genel}
     />
   );
 }

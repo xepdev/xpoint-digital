@@ -43,13 +43,13 @@ export default function HomeContent({
           <div className={styles.heroContent}>
             <div className={styles.heroBadge}>{t('Geleceği Şekillendirin', 'Shape the Future', lang)}</div>
             <h1 className={styles.heroTitle}>
-              <span className={styles.heroTitleLine1}>{t('Dijital', 'Digital', lang)}</span>
-              <span className={styles.heroTitleLine2}>{t('İmzanız Olsun', 'Be Your Signature', lang)}</span>
+              <span className={styles.heroTitleLine1}>xpoint</span>
+              <span className={styles.heroTitleLine2}>dijital.</span>
             </h1>
             <p className={styles.heroDesc}>
               {t(
-                'Markanızı modern stratejiler, yaratıcı içerikler ve veriye dayalı büyüme ile zirveye taşıyoruz.',
-                'We take your brand to the top with modern strategies, creative content, and data-driven growth.',
+                "Dijital Dünya'da Fark Yaratın;",
+                "Make a Difference in the Digital World;",
                 lang
               )}
             </p>
@@ -139,9 +139,15 @@ export default function HomeContent({
           <div className={styles.teamGrid}>
             {(ekip || []).slice(0, 4).map((member, i) => (
               <div key={i} className={styles.teamCard}>
-                <div className={styles.teamIcon}>{member.icon}</div>
+                <div className={styles.memberPhoto}>
+                  {member.image ? (
+                    <img src={member.image} alt={member.name} className={styles.memberImage} />
+                  ) : (
+                    <div className={styles.memberEmoji}>{member.icon || '👨‍💼'}</div>
+                  )}
+                </div>
                 <h3>{member.name}</h3>
-                <span>{lang === 'tr' ? member.roleTR : member.roleEN}</span>
+                <span className={styles.memberRole}>{lang === 'tr' ? member.roleTR : member.roleEN}</span>
               </div>
             ))}
           </div>
@@ -165,25 +171,11 @@ export default function HomeContent({
                     alt={brand.name}
                     width={220}
                     height={120}
-                    className={styles.logoImage}
+                    className={`${styles.logoImage} ${brand.name.includes('Sub-Station') ? styles.smallLogo : ''}`}
                   />
                 </div>
               ))}
             </div>
-          </div>
-
-          <div className={styles.logoGrid}>
-            {brandReferences.map((brand) => (
-              <div key={brand.name} className={styles.logoCard}>
-                <Image
-                  src={brand.logo}
-                  alt={brand.name}
-                  width={220}
-                  height={120}
-                  className={styles.logoImage}
-                />
-              </div>
-            ))}
           </div>
         </div>
       </section>

@@ -2,7 +2,7 @@
    XPOINT DIGITAL — Global Design System
    ========================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
 
 /* --- CSS Variables --- */
 :root {
@@ -24,7 +24,7 @@
   --text-muted: rgba(255, 255, 255, 0.35);
 
   --font-body: 'Inter', sans-serif;
-  --font-heading: 'Space Grotesk', sans-serif;
+  --font-heading: 'Outfit', sans-serif;
 
   --radius-sm: 8px;
   --radius-md: 16px;

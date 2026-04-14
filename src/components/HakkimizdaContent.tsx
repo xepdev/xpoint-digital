@@ -9,9 +9,10 @@ interface HakkimizdaContentProps {
   ekip: TeamMember[];
   hakkimizda: AboutPageData;
   stats: Stat[];
+  genel: any;
 }
 
-export default function HakkimizdaContent({ ekip, hakkimizda, stats }: HakkimizdaContentProps) {
+export default function HakkimizdaContent({ ekip, hakkimizda, stats, genel }: HakkimizdaContentProps) {
   const { lang } = useLang();
 
   return (
@@ -27,7 +28,7 @@ export default function HakkimizdaContent({ ekip, hakkimizda, stats }: Hakkimizd
               {lang === 'tr' ? hakkimizda.titleTR : hakkimizda.titleEN}
               <span className="gradient-text">{lang === 'tr' ? hakkimizda.subtitleTR : hakkimizda.subtitleEN}</span>
             </h1>
-            <p className="section-subtitle" style={{marginBottom: '32px'}}>
+            <p className="section-subtitle" style={{marginBottom: '32px', whiteSpace: 'pre-line'}}>
               {lang === 'tr' ? hakkimizda.descriptionTR : hakkimizda.descriptionEN}
             </p>
           </div>
@@ -73,11 +74,23 @@ export default function HakkimizdaContent({ ekip, hakkimizda, stats }: Hakkimizd
             {ekip.map((m, i) => (
               <div key={i} className={styles.teamCard} style={{ '--member-color': i % 2 === 0 ? '#6C63FF' : '#00D4FF' } as React.CSSProperties}>
                 <div className={styles.memberPhoto}>
-                  <div className={styles.memberEmoji}>{m.icon || '👨‍💼'}</div>
+                  {m.image ? (
+                    <img src={m.image} alt={m.name} className={styles.memberImage} />
+                  ) : (
+                    <div className={styles.memberEmoji}>{m.icon || '👨‍💼'}</div>
+                  )}
                 </div>
                 <h3 className={styles.memberName}>{m.name}</h3>
                 <div className={styles.memberRole} style={{color: i % 2 === 0 ? '#6C63FF' : '#00D4FF'}}>{lang === 'tr' ? m.roleTR : m.roleEN}</div>
                 <p className={styles.memberDesc}>{lang === 'tr' ? (m.bioTR || '') : (m.bioEN || '')}</p>
+                <div className={styles.memberSocial}>
+                  <a href={genel?.sosyalMedya?.instagram || "https://instagram.com/xpoint.digital"} target="_blank" rel="noopener noreferrer" className={styles.socialLink} title="Instagram">
+                    <i className="fab fa-instagram"></i>
+                  </a>
+                  <a href={genel?.sosyalMedya?.linkedin || "#"} target="_blank" rel="noopener noreferrer" className={styles.socialLink} title="LinkedIn">
+                    <i className="fab fa-linkedin-in"></i>
+                  </a>
+                </div>
               </div>
             ))}
           </div>
